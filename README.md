@@ -5,6 +5,11 @@ Ta strona jest poświęcona ogólnie rozumianemu pszczelarstwu ze szczególnym n
 
 Zapraszamy do lektury [Wiki](https://github.com/wolnepszczoly/wikipn/wiki)
 
+## Jak współtworzyć wiki
+
+Wiki jest tworzona przez Stowarzyszenie [Pszczelarstwa Naturalnego "Wolne Pszczoły"](http://wolnepszczoly.org), jeśli jesteś jego członkiem bądź tak czy inaczej bardzo chcesz współtworzyć wiki, stwórz konto na [Githubie](https://github.com), a następnie poproś o dostęp do niego na forum Wolnych Pszczół podając swoją nazwę użytkownika.
+
+Wiki jest pisana w [Markdown](https://pl.wikipedia.org/wiki/Markdown), jest to metoda opisywania tekstu specjalnymi znacznikami, które następnie są zamieniane na porządaną formę. Github Wiki ma dodatkowo edytor z podglądem i pomocą (ikona znaku zapytania w edytorze), co dodatkowo ułatwia edycję.
 
 ## Informacje na temat budowania wiki
 
