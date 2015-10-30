@@ -37,4 +37,4 @@ if __name__ == '__main__':
     convert.convert(settings['source_dir'], settings['docs_dir'])
     build.build(settings, clean_site_dir=True)
     create_index(settings['site_dir'])
-    os.system('cd %s;  git commit -a -m "Wiki update"; git push; cd ..' % settings['site_dir'])
+    os.system('cd %s ;  git add . ; git commit -m "Wiki update" ; git push ; cd ..' % settings['site_dir'])
