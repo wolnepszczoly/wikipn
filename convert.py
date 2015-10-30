@@ -1,4 +1,5 @@
 import os
+from mkdocs.config import load_config
 
 
 def change_links(text):
@@ -28,4 +29,5 @@ def convert(source, dest):
 
 
 if __name__ == '__main__':
-    convert('wikipn.wiki', 'docs')
+    settings = load_config()
+    convert(settings['source_dir'], settings['docs_dir'])

@@ -1,8 +1,10 @@
 site_name: 'Wiki Pszczelarstwa Naturalnego'
+source_dir: 'wikipn.wiki'
 docs_dir: 'docs'
-
+site_dir: 'wolnepszczoly.github.io'
+theme: 'united'
 
 # This must be last element
 pages:
-    - ['Home.md', 'Home']
-    - ['Po-co-ta-Wiki.md', 'Po co ta Wiki']
+    - 'Spis treści': 'Home.md'
+    #- 'Link': 'http://wolnepszczoly.org'
