@@ -33,6 +33,7 @@ def create_index(site_dir):
 
 
 if __name__ == '__main__':
+    os.system('git pull --recurse-submodules')
     settings = load_config()
     settings['pages'] = convert.convert(settings['source_dir'], settings['docs_dir'])
     build.build(settings, clean_site_dir=True)
