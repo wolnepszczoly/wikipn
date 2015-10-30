@@ -5,13 +5,13 @@ from mkdocs.config import load_config
 
 def change_links(text, pages_dict):
     start = text.find('[[')
-    while start != -1:
-        end = text.find(']]') + 2
-	if end == 1: return text
+    end = text.find(']]') + 2
+    while start != -1 and end != 1:
         between = text[start + 2:end - 2]
 	between = u'[%s](%s)' % (between, pages_dict.get(between))
         text = u''.join((text[:start], between, text[end:]))
-        index = text.find('[[')
+        start = text.find('[[')
+        end = text.find(']]') + 2
     return text
         
 
@@ -36,14 +36,36 @@ def convert(source, dest):
                 data = change_links(data, pages_dict)
                 df.write(data.encode('utf-8'))
     pages = pages_dict.items()
-    pages.sort(key=lambda o: o[1])
-    return [{key: value} for key, value in pages]
+    pages.sort(key=lambda o: (len(o[1].split('/')), o[1]))
+    pages_dict = {'____': []}
+    for name, path in pages:
+        cur = pages_dict
+        for dirname in path.split('/')[:-1]:
+            clean = dirname.replace('-', ' ') 
+            if clean not in cur:
+                cur[clean] = {'____': []}
+            cur = cur[clean]
+        cur['____'].append({name: path})
+
+    def return_pages(data):
+       ret = data['____']
+       for key in data:
+           if key != '____':
+               ret.append({key: return_pages(data[key])})
+       return ret
+
+    return return_pages(pages_dict)
 
 
 if __name__ == '__main__':
-    settings = load_config()
+    try:
+    	settings = load_config()
+    except:
+        settings = None
     with open('mkdocs.yml') as f:
     	config = yaml.load(f)
+    if settings is None:
+        settings = config
     config['pages']  = convert(settings['source_dir'], settings['docs_dir'])
     with open('mkdocs.yml', 'w') as f:
     	yaml.dump(config, f)

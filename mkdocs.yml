@@ -1,8 +1,25 @@
 docs_dir: docs
 pages:
 - {!!python/unicode 'Home': !!python/unicode 'Home.md'}
-- {!!python/unicode 'Po co ta Wiki': !!python/unicode 'Po-co-ta-Wiki/Po-co-ta-Wiki.md'}
+- !!python/unicode 'Pszczelarstwo Naturalne':
+  - {"Na \u015Bwiecie": "Pszczelarstwo-Naturalne/Na-\u015Bwiecie.md"}
+  - {"Og\xF3lnie": "Pszczelarstwo-Naturalne/Og\xF3lnie.md"}
+- !!python/unicode 'Ule i barcie':
+  - {"Barcie i k\u0142ody": "Ule-i-barcie/Barcie-i-k\u0142ody.md"}
+  - {!!python/unicode 'Kuszki': !!python/unicode 'Ule-i-barcie/Kuszki.md'}
+  - {!!python/unicode 'TBH': !!python/unicode 'Ule-i-barcie/TBH.md'}
+  - {!!python/unicode 'Warre': !!python/unicode 'Ule-i-barcie/Warre.md'}
+- !!python/unicode 'Metody chowu':
+  - {!!python/unicode 'Metody selekcji': !!python/unicode 'Metody-chowu/Metody-selekcji.md'}
+- !!python/unicode 'Biologia pszczoly i rodziny pszczelej':
+  - {!!python/unicode 'Czerw': !!python/unicode 'Biologia-pszczoly-i-rodziny-pszczelej/Czerw.md'}
+  - {"D\u0142ugo\u015B\u0107 \u017Cycia": "Biologia-pszczoly-i-rodziny-pszczelej/D\u0142\
+      ugo\u015B\u0107-\u017Cycia.md"}
+  - {!!python/unicode 'Genetyka': !!python/unicode 'Biologia-pszczoly-i-rodziny-pszczelej/Genetyka.md'}
+- !!python/unicode 'Choroby i metody leczenia':
+  - {!!python/unicode 'Nosema': !!python/unicode 'Choroby-i-metody-leczenia/Nosema.md'}
+  - {!!python/unicode 'Warroza': !!python/unicode 'Choroby-i-metody-leczenia/Warroza.md'}
 site_dir: wolnepszczoly.github.io
 site_name: Wiki Pszczelarstwa Naturalnego
 source_dir: wikipn.wiki
-theme: united
+theme: readthedocs
