@@ -15,8 +15,14 @@ Wiki jest pisana w [Markdown](https://pl.wikipedia.org/wiki/Markdown), jest to m
 
 Końcowa Wiki jest budowana statycznie z github wiki (projekt [gollum](https://github.com/gollum/gollum/wiki)) poprzez nasz własny mechanizm przy użyciu pythonowego skryptu i [MkDocs](http://www.mkdocs.org/).
 
-```
+### Instalowanie
+Można użyć virtualenv, jeśli nie to po prostu:
+```bash
 pip install -r requirements.txt
-python convert.py
-mkdocs build
 ```
+### Budowanie
+Są dwa skrypty jeden wstępnie przetwarzający źródła `convert.py` i drugi który odrazu wysyła strone na server `deploy.py`, standardowo będąc w katalogu projektu wykonujemy:
+```bash
+python deploy.py
+```
+

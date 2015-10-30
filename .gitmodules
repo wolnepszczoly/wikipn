@@ -3,4 +3,4 @@
 	url = https://github.com/wolnepszczoly/wikipn.wiki
 [submodule "wolnepszczoly.github.io"]
 	path = wolnepszczoly.github.io
-	url = git@github.com:wolnepszczoly/wolnepszczoly.github.io.git
+	url = https://github.com/wolnepszczoly/wolnepszczoly.github.io
