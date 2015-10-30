@@ -34,7 +34,7 @@ def create_index(site_dir):
 
 if __name__ == '__main__':
     settings = load_config()
-    convert.convert(settings['source_dir'], settings['docs_dir'])
+    settings['pages'] = convert.convert(settings['source_dir'], settings['docs_dir'])
     build.build(settings, clean_site_dir=True)
     create_index(settings['site_dir'])
     os.system('cd %s ;  git add . ; git commit -m "Wiki update" ; git push ; cd ..' % settings['site_dir'])
