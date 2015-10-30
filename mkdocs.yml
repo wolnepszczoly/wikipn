@@ -1,0 +1,8 @@
+site_name: 'Wiki Pszczelarstwa Naturalnego'
+docs_dir: 'docs'
+
+
+# This must be last element
+pages:
+    - ['Home.md', 'Home']
+    - ['Po-co-ta-Wiki.md', 'Po co ta Wiki']
